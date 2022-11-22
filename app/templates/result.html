@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/results.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="weatherResults">
+    {{ result }}
+    <h3>Weather Data Of {{ result.location }} Today</h3>
+    <h2>{{ result.temp }}°</h2>
+    <h3>{{ result.weather }}</h3>
+    <img src="{{ result.icon_url }}" >
+    <h4>Feels like: {{ result.feels_like }}°</h4>
+    <h4>Sunrise: {{ result.dt_obj }}</h4>
+    <h4>Minimum Temp Today: {{ result.temp_min }}°</h4>
+    <h4>Maximum Temp Today: {{ result.temp_max }}°</h4>
+    <h4>Adelaide Time (UTC+10:30): {{ result.dt_obj }}</h4>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+ <table id="data" class="table table-striped">
+
+   <thead>
+
+     <tr>
+
+       <th>Location</th>
+
+       <th>Temperature</th>
+
+       <th>Feels Like</th>
+
+         <th>Timestamp</th>
+
+         <th>icon_url</th>
+
+         <th>Weather</th>
+
+         <th>Min Temp</th>
+
+         <th>Max Temp</th>
+
+         <th>created</th>
+
+         <th>created_url</th>
+     </tr>
+
+   </thead>
+
+   <tbody>
+
+   </tbody>
+
+ </table>
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+ <script>
+
+   $(document).ready(function () {
+
+     $('#data').DataTable({
+
+       ajax: '/api/results',
+
+       pageLength: 25,
+
+       columns: [
+
+
+
+
+         {data: 'location'},
+
+         {data: 'temp'},
+
+         {data: 'feels_like'},
+
+         {data: 'timestamp'},
+
+         {data: 'icon_url'},
+
+         {data: 'weather'},
+
+         {data: 'temp_min'},
+
+         {data: 'temp_max'},
+
+         {data: 'created'},
+
+         {data: 'created_url'}
+
+       ],
+
+     });
+
+   });
+
+ </script>
+
+{% endblock %}

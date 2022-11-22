@@ -1,0 +1,10 @@
+#weatherResults {
+    background-image: url(https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
